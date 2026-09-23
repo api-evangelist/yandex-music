@@ -1,0 +1,63 @@
+generated: '2026-09-23'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io)
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (security/yandex-music-domain-security.yml,
+  security/yandex-music-vulnerability-disclosure.yml, yandex.ru) or its accepted GitHub org.'
+packages:
+- name: yandex-music
+  registry: pypi
+  url: https://pypi.org/project/yandex-music/
+  language: Python
+  official: true
+  version: 3.0.0
+  published: '2026-04-18'
+  evidence: metadata names yandex.ru
+- name: yandex_music
+  registry: pypi
+  url: https://pypi.org/project/yandex_music/
+  language: Python
+  official: true
+  version: 3.0.0
+  published: '2026-04-18'
+  evidence: metadata names yandex.ru
+- name: yandex-music
+  registry: npm
+  url: https://www.npmjs.com/package/yandex-music
+  language: JavaScript
+  official: false
+  version: 1.7.0
+  published: '2022-06-17'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: yandex_music
+  registry: rubygems
+  url: https://rubygems.org/gems/yandex_music
+  language: Ruby
+  official: false
+  version: 0.0.1
+  published: '2017-11-29'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: yandexmusic
+  registry: nuget
+  url: https://www.nuget.org/packages/yandexmusic
+  language: C#
+  official: false
+  version: 0.6.0
+  published: null
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: yandex-music
+  registry: crates
+  url: https://crates.io/crates/yandex-music
+  language: Rust
+  official: false
+  version: 0.7.0
+  published: '2026-07-17'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'
+- name: yandex_music
+  registry: crates
+  url: https://crates.io/crates/yandex_music
+  language: Rust
+  official: false
+  version: 0.7.0
+  published: '2026-07-17'
+  evidence: 'name match only: the metadata names neither the provider''s domain nor its GitHub org'

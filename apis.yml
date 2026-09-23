@@ -1,23 +1,80 @@
 aid: yandex-music
+
 name: Yandex Music
-description: 'Yandex Music is a company surfaced via the API Evangelist harvest backlog (source: music)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://music.yandex.ru/pages/main/i/og/home.png?webp=false
+
+description: 'Yandex Music is a Russian online music streaming service offering a vast catalog of songs, albums, playlists, and podcasts. Users can listen to music on-demand, create personal playlists, and discover new content through personalized recommendations. The platform provides both free ad‑supported and subscription‑based tiers, supporting multiple devices including web, mobile apps, and smart speakers. Yandex Music integrates with Yandex’s broader ecosystem, offering seamless access via Yandex ID and supporting social sharing features.'
+
 url: https://raw.githubusercontent.com/api-evangelist/yandex-music/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:music
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
 tags:
-- Company
-apis: []
+- Music
+- Streaming
+- Russian
+- Entertainment
+- API
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: https://ya.cc/t/1cSZixjB3gkSva
+- type: SecurityTxt
+  url: well-known/yandex-music-yandex-security.txt
+- type: WellKnown
+  url: well-known/yandex-music-well-known.yml
+- type: Hosts
+  url: hosts/yandex-music-hosts.yml
+- type: SDKs
+  url: packages/yandex-music-packages.yml
+- type: Packages
+  url: packages/yandex-music-packages.yml
+- type: Newsroom
+  url: https://yandex.ru/company/news
+- type: VulnerabilityDisclosure
+  url: security/yandex-music-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/yandex-music-domain-security.yml
 - type: Website
   url: https://music.yandex.ru/
+- type: Documentation
+  url: https://yandex.ru/support/music/ru/llms.txt
+- type: Support
+  url: https://yandex.ru/support/music/ru/
+- type: DeveloperPortal
+  url: https://yandex.ru/support/music/ru/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: "Music.yandex.ru returns a JavaScript shell and no machine‑readable OpenAPI spec was found despite probing common spec URLs."
+  evidence:
+    - url: https://music.yandex.ru/openapi.json
+      status: 200
+  checked: 2026-09-23
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
