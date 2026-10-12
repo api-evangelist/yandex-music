@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "yandex-music",
+    "captured_at": "2026-10-11T195309",
+    "source_url": "https://yandex.ru/support/music/ru/",
+    "source_type": "DeveloperPortal",
+    "file": "yandex-music-2026-10-11T195309.png",
+    "bytes": 447671,
+    "capture": "playwright-local"
+  }
+]
